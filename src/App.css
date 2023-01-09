@@ -1,38 +1,90 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: rgb(230, 230, 230);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20vh;
+  overflow: auto;
+}
+
+.todo-left {
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  font-family: "Lato", sans-serif;
+  min-width: 40vw;
+  height: 2.5rem;
+  border: none;
+  font-size: 26px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.todo-input:focus {
+  outline: none;
+}
+
+.todo {
+  font-size: 36px;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.to-do-input {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.todo-add-btn,
+.todo-clear-btn {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  min-width: 10vw;
+  min-height: 3vw;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 1rem;
   color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.todo-add-btn {
+  background-color: #28d8b2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-clear-btn {
+  background-color: #ef4444;
+}
+
+.todo-add-btn:hover,
+.todo-clear-btn:hover {
+  filter: brightness(110%);
+}
+
+.todo-add-btn:active,
+.todo-clear-btn:active {
+  transform: translateY(5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
